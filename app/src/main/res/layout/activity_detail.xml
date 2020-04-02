@@ -4,43 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
         android:background="@android:color/transparent">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"
+            android:layout_height="350dp"
             android:minHeight="?attr/actionBarSize"
             app:contentScrim="@android:color/white"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
-            app:layout_scrollFlags="scroll|enterAlways">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:scrimAnimationDuration="300"
+            app:titleEnabled="false">
 
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/rivPhoto"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:contentDescription="@null"
-                android:scaleType="fitCenter"
-                android:text="Hello World!"
-                android:transitionName="imageMain"
-                app:layout_collapseMode="parallax"
-                app:riv_corner_radius_top_left="@dimen/spacing_middle"
-                app:riv_corner_radius_top_right="@dimen/spacing_middle"
-                app:riv_tile_mode="clamp" />
+                app:layout_collapseMode="parallax">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/rivPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/spacing_mlarge"
+                    android:contentDescription="@null"
+                    android:scaleType="fitCenter"
+                    android:text="Hello World!"
+                    android:transitionName="imageMain"
+                    app:riv_corner_radius_top_left="@dimen/spacing_middle"
+                    app:riv_corner_radius_top_right="@dimen/spacing_middle"
+                    app:riv_tile_mode="clamp" />
+            </RelativeLayout>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@android:color/white"
+                android:elevation="0dp"
                 android:minHeight="?attr/actionBarSize"
-                app:layout_collapseMode="parallax"
+                app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -70,21 +77,20 @@
                 android:orientation="vertical"
                 android:padding="@dimen/spacing_large">
 
+
+
                 <TextView
                     android:id="@+id/tvNameEn"
-                    style="@style/TextViewMediumBlackSmall"
-                    android:text="Brokoli Hijau" />
+                    style="@style/TextViewMediumBlackSmall" />
 
                 <TextView
                     android:id="@+id/tvName"
-                    style="@style/TextViewBoldPrimaryMedium"
-                    android:text="Brokoli Hijau" />
+                    style="@style/TextViewBoldPrimaryMedium" />
 
 
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tvTitleDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_xmedium"
@@ -93,7 +99,8 @@
                 android:text="@string/do_you_know"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/spacing_xxlarge" />
+                android:textSize="@dimen/spacing_xxlarge"
+                tools:ignore="SpUsage" />
 
             <TextView
                 android:id="@+id/tvDescription"
@@ -103,14 +110,12 @@
                 android:layout_marginEnd="@dimen/spacing_mxlarge"
                 android:fontFamily="@font/google_sans_light"
                 android:justificationMode="inter_word"
-                android:text="@string/vegetable_desc"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_medium_small"
                 android:textStyle="normal"
                 tools:targetApi="o" />
 
             <TextView
-                android:id="@+id/tvTitleBenefit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_xmedium"
@@ -119,17 +124,17 @@
                 android:text="@string/benefit_of_product"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/spacing_xxlarge" />
+                android:textSize="@dimen/spacing_xxlarge"
+                tools:ignore="SpUsage" />
 
             <TextView
-                android:id="@+id/tvHealtBenefits"
+                android:id="@+id/tvBenefit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_mxlarge"
                 android:layout_marginEnd="@dimen/spacing_mxlarge"
                 android:fontFamily="@font/google_sans_light"
                 android:justificationMode="inter_word"
-                android:text="@string/fruit_desc"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_medium_small"
                 android:textStyle="normal"

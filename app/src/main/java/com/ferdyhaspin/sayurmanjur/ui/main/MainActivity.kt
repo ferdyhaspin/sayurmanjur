@@ -13,10 +13,7 @@ import com.ferdyhaspin.sayurmanjur.R
 import com.ferdyhaspin.sayurmanjur.model.Vegetable
 import com.ferdyhaspin.sayurmanjur.model.VegetableData
 import com.ferdyhaspin.sayurmanjur.ui.detail.DetailActivity
-import com.ferdyhaspin.sayurmanjur.util.RecyclerViewCallback
-import com.ferdyhaspin.sayurmanjur.util.main
-import com.ferdyhaspin.sayurmanjur.util.parseJson
-import com.ferdyhaspin.sayurmanjur.util.toast
+import com.ferdyhaspin.sayurmanjur.util.*
 import com.google.gson.Gson
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
@@ -64,6 +61,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
         val activityOptionsCompat =
             ActivityOptionsCompat.makeSceneTransitionAnimation(this, view, "imageMain")
         Intent(this, DetailActivity::class.java).apply {
+            putExtra(Constant.VEGETABLE, item)
             startActivity(this, activityOptionsCompat.toBundle())
         }
     }
