@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
@@ -15,6 +16,8 @@ import com.ferdyhaspin.sayurmanjur.model.Vegetable
 import com.ferdyhaspin.sayurmanjur.model.VegetableData
 import com.ferdyhaspin.sayurmanjur.ui.detail.DetailActivity
 import com.ferdyhaspin.sayurmanjur.util.*
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
@@ -92,8 +95,21 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_user -> toast("Test")
+            R.id.action_user -> showProfile()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun showProfile() {
+        val view = layoutInflater.inflate(R.layout.bottom_detail_account, root, false)
+        val dialog = BottomSheetDialog(this)
+        dialog.setOnShowListener { dialogs ->
+            val d = dialogs as BottomSheetDialog
+            val bottomSheet =
+                d.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
+            BottomSheetBehavior.from(bottomSheet).state = BottomSheetBehavior.STATE_EXPANDED
+        }
+        dialog.setContentView(view)
+        dialog.show()
     }
 }
