@@ -30,6 +30,7 @@
                 android:layout_marginTop="@dimen/spacing_mlarge"
                 android:contentDescription="@null"
                 android:scaleType="fitCenter"
+                android:text="Hello World!"
                 android:transitionName="detail_image"
                 app:layout_collapseMode="parallax"
                 app:riv_corner_radius_top_left="@dimen/spacing_middle"

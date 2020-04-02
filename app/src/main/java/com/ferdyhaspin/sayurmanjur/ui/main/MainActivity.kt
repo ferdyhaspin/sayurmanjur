@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
         setContentView(R.layout.activity_main)
         initView()
         getData()
+
     }
 
     private fun initView() {
@@ -77,11 +78,24 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
     }
 
     override fun onItemClickListener(vararg view: View, item: Vegetable) {
+//        val statusBar = findViewById<View>(R.id.statusBarBackground)
+//        val navigationBar = findViewById<View>(R.id.navigationBarBackground)
+//
+//        val status = Pair(statusBar, Window.STATUS_BAR_BACKGROUND_TRANSITION_NAME)
+//        val navigation = Pair(navigationBar, Window.NAVIGATION_BAR_BACKGROUND_TRANSITION_NAME)
         val image = Pair(view[0], "detail_image")
         val name = Pair(view[1], "detail_name")
         val nameEn = Pair(view[2], "detail_name_en")
+
         val activityOptionsCompat =
-            ActivityOptionsCompat.makeSceneTransitionAnimation(this, image, name, nameEn)
+            ActivityOptionsCompat.makeSceneTransitionAnimation(
+                this,
+//                navigation,
+//                status,
+                image,
+                name,
+                nameEn
+            )
         Intent(this, DetailActivity::class.java).apply {
             putExtra(Constant.VEGETABLE, item)
             startActivity(this, activityOptionsCompat.toBundle())

@@ -11,7 +11,9 @@
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ferdyhaspin.sayurmanjur.ui.detail.DetailActivity" />
+        <activity
+            android:name="com.ferdyhaspin.sayurmanjur.ui.detail.DetailActivity"
+            android:launchMode="singleTop" />
         <activity android:name="com.ferdyhaspin.sayurmanjur.ui.main.MainActivity" />
         <activity android:name="com.ferdyhaspin.sayurmanjur.ui.splash.SplashActivity">
             <intent-filter>
