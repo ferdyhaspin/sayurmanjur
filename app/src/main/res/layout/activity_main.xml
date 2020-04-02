@@ -10,16 +10,30 @@
 
     <include layout="@layout/toolbar" />
 
-    <androidx.core.widget.NestedScrollView
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/loading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:duration="10">
+
+        <include layout="@layout/place_holder_main" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:clickable="true"
             android:focusable="true"
-            android:clickable="true">
+            android:orientation="vertical">
 
             <TextView
                 style="@style/TextViewMediumBlackMedium"
@@ -41,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
+                android:focusableInTouchMode="true"
                 android:orientation="horizontal"
                 android:overScrollMode="never"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"

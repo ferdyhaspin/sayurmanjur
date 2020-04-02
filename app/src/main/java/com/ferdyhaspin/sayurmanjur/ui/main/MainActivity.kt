@@ -20,6 +20,7 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.coroutines.delay
 
 
 class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
@@ -37,11 +38,26 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
     }
 
     private fun getData() = main {
-        //        delay(2000L)
+        showLoading(true)
+        delay(2000L)
+        showLoading(false)
         val data = Gson().fromJson(parseJson(), VegetableData::class.java)
         initRecyclerView(data.fruits, rvFruit)
         initRecyclerView(data.vegetables, rvVegetable)
     }
+
+    private fun showLoading(show: Boolean) {
+        if (show) {
+            loading.startShimmerAnimation()
+            loading.toVisible()
+            content.toGone()
+        } else {
+            loading.stopShimmerAnimation()
+            loading.toGone()
+            content.toVisible()
+        }
+    }
+
 
     private fun initRecyclerView(list: List<Vegetable>, rv: RecyclerView) {
         val mAdapter = GroupAdapter<ViewHolder>().apply {

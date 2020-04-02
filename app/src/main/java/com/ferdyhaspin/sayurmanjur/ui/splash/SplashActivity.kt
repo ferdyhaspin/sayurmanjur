@@ -42,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun nextScreen() = main {
-        delay(3000L)
+        delay(2000L)
         Intent(this@SplashActivity, MainActivity::class.java).apply {
             startActivity(this)
             finish()

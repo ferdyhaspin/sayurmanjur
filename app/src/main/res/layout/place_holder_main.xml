@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_large">
+
+    <View
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/spacing_xmedium"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/spacing_xmedium"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/spacing_xmedium"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:background="@drawable/bg_fill_gray_rounded" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:background="@drawable/bg_fill_gray_rounded" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:background="@drawable/bg_fill_gray_rounded" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:background="@drawable/bg_fill_gray_rounded" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/spacing_xmedium"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/spacing_xmedium"
+        android:background="@drawable/bg_fill_gray_rounded" />
+
+
+</LinearLayout>
