@@ -1,6 +1,5 @@
 package com.ferdyhaspin.sayurmanjur.ui.main
 
-import android.widget.ImageView
 import com.ferdyhaspin.sayurmanjur.R
 import com.ferdyhaspin.sayurmanjur.databinding.ItemProductBinding
 import com.ferdyhaspin.sayurmanjur.model.Vegetable
@@ -23,7 +22,7 @@ class VegetableItem(
     override fun bind(viewBinding: ItemProductBinding, position: Int) {
         viewBinding.item = vegetable
         val image = viewBinding.rivPhoto
-        (image as ImageView).loadImage(vegetable.photo)
+        image.loadImage(vegetable.photo)
         viewBinding.root.setOnClickListener {
             onClick.onItemClickListener(vegetable, image)
         }

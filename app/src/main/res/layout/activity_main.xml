@@ -25,6 +25,13 @@
                 android:layout_marginTop="@dimen/spacing_large"
                 android:text="@string/vegetables" />
 
+            <TextView
+                style="@style/TextViewMediumBlackSmall"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/vegetable_desc" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvVegetable"
                 android:layout_width="match_parent"
@@ -36,11 +43,24 @@
                 tools:itemCount="1"
                 tools:listitem="@layout/item_product" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:background="@color/colorGray" />
+
             <TextView
                 style="@style/TextViewMediumBlackMedium"
                 android:layout_marginStart="@dimen/spacing_large"
-                android:layout_marginTop="@dimen/spacing_large"
                 android:text="@string/fruits" />
+
+            <TextView
+                style="@style/TextViewMediumBlackSmall"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/fruit_desc" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvFruit"
@@ -56,6 +76,5 @@
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 
 </LinearLayout>

@@ -16,18 +16,21 @@
         app:cardElevation="@dimen/spacing_medium">
 
         <LinearLayout
+            android:id="@+id/root"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
             android:orientation="vertical"
             android:padding="@dimen/spacing_middle">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/rivPhoto"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
                 android:foregroundGravity="top"
-                android:scaleType="fitCenter"
                 app:riv_corner_radius_top_left="@dimen/spacing_middle"
                 app:riv_corner_radius_top_right="@dimen/spacing_middle"
                 app:riv_tile_mode="clamp" />

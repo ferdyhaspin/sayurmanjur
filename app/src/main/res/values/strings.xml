@@ -3,4 +3,10 @@
     <string name="profile">Profile</string>
     <string name="vegetables">Sayuran</string>
     <string name="fruits">Buah-buahan</string>
+    <string name="vegetable_desc">
+        Sayuran merupakan sebutan umum bagi bahan pangan asal tumbuhan yang biasanya mengandung kadar air tinggi dan dikonsumsi dalam keadaan segar atau setelah diolah secara minimal. Sebutan untuk beraneka jenis sayuran disebut sebagai sayur-sayuran atau sayur-mayur. Sejumlah sayuran dapat dikonsumsi mentah tanpa dimasak terlebih dahulu, sementara yang lainnya harus diolah terlebih dahulu dengan cara direbus, dikukus, digoreng, disangrai, atau dimakan mentah-mentah. Sayuran berbentuk daun yang dimakan mentah disebut sebagai lalapan. Sayur merupakan makanan yang sehat untuk dikonsumsi.
+    </string>
+    <string name="fruit_desc">
+        Buah adalah organ pada tumbuhan berbunga yang merupakan perkembangan lanjutan dari bakal buah (ovarium). Buah biasanya membungkus dan melindungi biji. Aneka rupa dan bentuk buah tidak terlepas kaitannya dengan fungsi utama buah, yakni sebagai pemencar biji tumbuhan.
+    </string>
 </resources>
