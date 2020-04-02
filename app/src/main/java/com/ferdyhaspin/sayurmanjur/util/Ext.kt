@@ -1,6 +1,7 @@
 package com.ferdyhaspin.sayurmanjur.util
 
 import android.content.Context
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
@@ -45,4 +46,24 @@ fun ImageView.loadImage(url: String) =
         )
         .load(url)
         .into(this)
+
+fun ImageView.loadLocal(name: String) {
+    Glide.with(this)
+        .load(
+            resources.getIdentifier(
+                name,
+                "drawable",
+                this.context.packageName
+            )
+        )
+        .into(this)
+}
+
+fun View.toVisible() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.toGone() {
+    this.visibility = View.GONE
+}
 

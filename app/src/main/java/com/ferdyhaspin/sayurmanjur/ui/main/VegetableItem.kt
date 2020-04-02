@@ -4,7 +4,7 @@ import com.ferdyhaspin.sayurmanjur.R
 import com.ferdyhaspin.sayurmanjur.databinding.ItemProductBinding
 import com.ferdyhaspin.sayurmanjur.model.Vegetable
 import com.ferdyhaspin.sayurmanjur.util.RecyclerViewCallback
-import com.ferdyhaspin.sayurmanjur.util.loadImage
+import com.ferdyhaspin.sayurmanjur.util.loadLocal
 import com.xwray.groupie.databinding.BindableItem
 
 /**
@@ -22,7 +22,7 @@ class VegetableItem(
     override fun bind(viewBinding: ItemProductBinding, position: Int) {
         viewBinding.item = vegetable
         val image = viewBinding.rivPhoto
-        image.loadImage(vegetable.photo)
+        image.loadLocal(vegetable.photo)
         viewBinding.root.setOnClickListener {
             onClick.onItemClickListener(vegetable, image)
         }

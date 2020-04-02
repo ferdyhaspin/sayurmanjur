@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
     }
 
     private fun getData() = main {
-        delay(2000L)
+//        delay(2000L)
         val data = Gson().fromJson(parseJson(), VegetableData::class.java)
         initRecyclerView(data.fruits, rvFruit)
         initRecyclerView(data.vegetables, rvVegetable)

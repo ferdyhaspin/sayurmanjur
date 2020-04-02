@@ -23,7 +23,9 @@
                 style="@style/TextViewMediumBlackMedium"
                 android:layout_marginStart="@dimen/spacing_large"
                 android:layout_marginTop="@dimen/spacing_large"
-                android:text="@string/vegetables" />
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/vegetables"
+                android:textStyle="bold" />
 
             <TextView
                 style="@style/TextViewMediumBlackSmall"
@@ -53,7 +55,9 @@
             <TextView
                 style="@style/TextViewMediumBlackMedium"
                 android:layout_marginStart="@dimen/spacing_large"
-                android:text="@string/fruits" />
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/fruits"
+                android:textStyle="bold" />
 
             <TextView
                 style="@style/TextViewMediumBlackSmall"
