@@ -1,5 +1,6 @@
 package com.ferdyhaspin.sayurmanjur.util
 
+import android.view.View
 import android.widget.ImageView
 import com.ferdyhaspin.sayurmanjur.model.Vegetable
 
@@ -11,7 +12,7 @@ import com.ferdyhaspin.sayurmanjur.model.Vegetable
 interface RecyclerViewCallback {
 
     interface OnCLick {
-        fun onItemClickListener(item: Vegetable, view: ImageView)
+        fun onItemClickListener(vararg view: View, item: Vegetable)
     }
 
 }

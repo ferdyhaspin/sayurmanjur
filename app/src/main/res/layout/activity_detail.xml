@@ -14,38 +14,32 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:minHeight="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:minHeight="350dp"
             app:contentScrim="@android:color/white"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:scrimAnimationDuration="300"
             app:titleEnabled="false">
 
-            <RelativeLayout
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/rivPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                app:layout_collapseMode="parallax">
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/rivPhoto"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/spacing_mlarge"
-                    android:contentDescription="@null"
-                    android:scaleType="fitCenter"
-                    android:text="Hello World!"
-                    android:transitionName="imageMain"
-                    app:riv_corner_radius_top_left="@dimen/spacing_middle"
-                    app:riv_corner_radius_top_right="@dimen/spacing_middle"
-                    app:riv_tile_mode="clamp" />
-            </RelativeLayout>
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:text="Hello World!"
+                android:transitionName="detail_image"
+                app:layout_collapseMode="parallax"
+                app:riv_corner_radius_top_left="@dimen/spacing_middle"
+                app:riv_corner_radius_top_right="@dimen/spacing_middle"
+                app:riv_tile_mode="clamp" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:elevation="0dp"
                 android:minHeight="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
@@ -77,15 +71,15 @@
                 android:orientation="vertical"
                 android:padding="@dimen/spacing_large">
 
-
-
                 <TextView
                     android:id="@+id/tvNameEn"
-                    style="@style/TextViewMediumBlackSmall" />
+                    style="@style/TextViewMediumBlackSmall"
+                    android:transitionName="detail_name_en" />
 
                 <TextView
                     android:id="@+id/tvName"
-                    style="@style/TextViewBoldPrimaryMedium" />
+                    style="@style/TextViewBoldPrimaryMedium"
+                    android:transitionName="detail_name" />
 
 
             </LinearLayout>

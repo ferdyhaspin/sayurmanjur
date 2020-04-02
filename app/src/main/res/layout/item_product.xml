@@ -37,6 +37,7 @@
 
 
             <TextView
+                android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
@@ -47,7 +48,7 @@
                 android:textSize="@dimen/font_extra_super_small" />
 
             <TextView
-                android:id="@+id/tvName"
+                android:id="@+id/tvNameEn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/google_sans_medium"

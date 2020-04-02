@@ -4,9 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
+import androidx.core.util.Pair
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ferdyhaspin.sayurmanjur.R
@@ -19,7 +20,6 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
-import kotlinx.coroutines.delay
 
 
 class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
     }
 
     private fun getData() = main {
-//        delay(2000L)
+        //        delay(2000L)
         val data = Gson().fromJson(parseJson(), VegetableData::class.java)
         initRecyclerView(data.fruits, rvFruit)
         initRecyclerView(data.vegetables, rvVegetable)
@@ -57,9 +57,12 @@ class MainActivity : AppCompatActivity(), RecyclerViewCallback.OnCLick {
         }
     }
 
-    override fun onItemClickListener(item: Vegetable, view: ImageView) {
+    override fun onItemClickListener(vararg view: View, item: Vegetable) {
+        val image = Pair(view[0], "detail_image")
+        val name = Pair(view[1], "detail_name")
+        val nameEn = Pair(view[2], "detail_name_en")
         val activityOptionsCompat =
-            ActivityOptionsCompat.makeSceneTransitionAnimation(this, view, "imageMain")
+            ActivityOptionsCompat.makeSceneTransitionAnimation(this, image, name, nameEn)
         Intent(this, DetailActivity::class.java).apply {
             putExtra(Constant.VEGETABLE, item)
             startActivity(this, activityOptionsCompat.toBundle())

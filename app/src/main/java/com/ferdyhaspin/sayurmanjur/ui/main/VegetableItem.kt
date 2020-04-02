@@ -1,5 +1,6 @@
 package com.ferdyhaspin.sayurmanjur.ui.main
 
+import android.view.View
 import com.ferdyhaspin.sayurmanjur.R
 import com.ferdyhaspin.sayurmanjur.databinding.ItemProductBinding
 import com.ferdyhaspin.sayurmanjur.model.Vegetable
@@ -22,9 +23,11 @@ class VegetableItem(
     override fun bind(viewBinding: ItemProductBinding, position: Int) {
         viewBinding.item = vegetable
         val image = viewBinding.rivPhoto
+        val name = viewBinding.tvName as View
+        val nameEn = viewBinding.tvNameEn as View
         image.loadLocal(vegetable.photo)
         viewBinding.root.setOnClickListener {
-            onClick.onItemClickListener(vegetable, image)
+            onClick.onItemClickListener(image, name, nameEn, item = vegetable)
         }
     }
 }
